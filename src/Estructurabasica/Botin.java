@@ -1,4 +1,5 @@
 package Estructurabasica;
 
-public class SantaClaus {
+public class Botin {
+
 }
