@@ -13,16 +13,18 @@ public class Regalos {
         portales.add(1);
         int posicion=portales.get(0);
         System.out.println("Donde aterriza Papa Noel");
-        for(int i:portales){
-            System.out.print(i+" ");
-        }
+//        for(int i:portales){
+//            System.out.print(i+" ");
+//        }
+        System.out.println(portales);
         System.out.println();
         System.out.println("Orden");
         System.out.println();
-        ArrayList<Integer>orden=PortalMasCerca(posicion,portales);
-        for(int i:orden){
-            System.out.print(i+" ");
-        }
+//        ArrayList<Integer>orden=PortalMasCerca(posicion,portales);
+//        for(int i:orden){
+//            System.out.print(i+" ");
+//        }
+        System.out.println(PortalMasCerca(posicion,portales));
 
         }
         public static ArrayList<Integer> PortalMasCerca(int posicion, ArrayList<Integer> portales) {
