@@ -10,11 +10,16 @@ import java.util.Scanner;
 
 public class CountCountries {
     public static void main(String[] args) throws IOException {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Dime un pais");
-        String paiselegido=sc.nextLine();
-        Map<String, Integer>map = new HashMap<>();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Dime un pais");
+//        String paiselegido = sc.nextLine();
+        String paiselegido="España";
+        System.out.println(CountCountries());
+        System.out.println(CountCountries().get(paiselegido));
 
+    }
+    public static Map<String,Integer>CountCountries()throws IOException{
+        Map<String, Integer>map = new HashMap<>();
         BufferedReader reader = new BufferedReader(new FileReader("/home/alemirram3/Escritorio/Colfuturo-Seleccionados.csv"));
         String line;
         while ((line = reader.readLine()) != null) {
@@ -28,13 +33,8 @@ public class CountCountries {
             else
                 map.put(pais, freq + 1);
         }
-        if(map.containsKey(paiselegido)) {
-            System.out.println(map);
-        }else{
-            System.out.println("No hay ningun pais");
-        }
         reader.close();
 //Cogemos el campo 7 de la línea
-
+        return map;
     }
 }
