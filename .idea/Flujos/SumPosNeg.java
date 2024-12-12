@@ -1,32 +1,17 @@
-package Estructurabasica;
-
+package Flujos;
 import java.util.ArrayList;
-
-public class SumNegPos {
+import java.util.List;
+public class Sumaposneg {
     public static void main(String[] args) {
-        ArrayList<Integer>numeros=new ArrayList<>();
-        numeros.add(20);
-        numeros.add(-2);
-        numeros.add(43);
-        numeros.add(-5);
-        System.out.println("Suma Positivos");
-        System.out.println(sumpos(numeros));
-        System.out.println("Suma Negativos");
-        System.out.println(sumneg(numeros));
-    }
-    public static int sumpos(ArrayList<Integer>numeros){
-        int sumpos=numeros.stream()
+        List<String> numeros = new ArrayList<>();
+        int contaodorpos=0;
+        int contadorneg=0;
+        numeros.add("2");
+        numeros.add("30");
+        numeros.add("-1");
+        int suma = numeros.stream()
                 .mapToInt(Integer::valueOf)
-                .filter(num -> num >= 0)
                 .sum();
-
-        return sumpos;
-    }
-    public static int sumneg(ArrayList<Integer>numeros){
-        int sumneg=numeros.stream()
-                .mapToInt(Integer::valueOf)
-                .filter(num-> num < 0)
-                .sum();
-        return sumneg;
+        System.out.println(contadorneg+" Negativos y "+contaodorpos+" positivos");
     }
 }
